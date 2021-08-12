@@ -1,0 +1,10 @@
+<h1>Editing {{.Name}}</h1>
+<form action="/update/{{.Id}}" method="POST">
+    <input name="name" type="text" placeholder="Name" value="{{.Name}}"/>
+    <input name="address" type="text" placeholder="Address" value="{{.Address}}"/>
+    <input name="city" type="text" placeholder="City" value="{{.City}}"/>
+    <input name="country" type="text" placeholder="Country" value="{{.Country}}"/>
+    <textarea name="description" placeholder="Description" rows="20" cols="80">{{printf "%s" .Description}}</textarea>
+    <input name="music" type="text" placeholder="Music" value="{{.Music}}">
+    <div><input type="submit" value="Edit"></div>
+</form>

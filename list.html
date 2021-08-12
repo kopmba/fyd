@@ -1,0 +1,22 @@
+<h1>All the lounge</h1>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Localisation</th>
+        <th>Music Playlist</th>
+    </thead>
+    {{block "list" .}}
+        <tbody>
+            {{range .}}
+                <tr>
+                    <td>{{printf "%s" .Name}}</td>
+                    <td>{{printf "%s" .Description}}</td>
+                    <td>{{printf "%s" .Address}}, {{printf "%s" .City}}, {{printf "%s" .Country}}</td>
+                    <td>{{printf "%s" .Music}}</td>
+                </tr>
+            {{end}}
+        </tbody>
+    {{end}}
+</table>

@@ -1,0 +1,5 @@
+<h1>Deleting {{.Name}}</h1>
+<form action="/remove/{{.Id}}" method="POST">
+    <input name="id" hidden type="text" value="{{.Id}}">
+    <div><input type="submit" value="Delete"></div>
+</form>
